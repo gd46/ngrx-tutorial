@@ -1,0 +1,11 @@
+<div class="right" *ngIf="people">
+
+  <h3>People</h3>
+  <ul>
+    <button (click)="getPeople()">Get people</button>
+    <li *ngFor="let person of people | async;">
+      <span>{{ person.name }}</span> | <span>{{ person.height }}</span>
+    </li>
+  </ul>
+
+</div>
